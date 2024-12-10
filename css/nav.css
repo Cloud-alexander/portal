@@ -1,4 +1,4 @@
-/* Global rules */
+/* Default styles */
 .topnav {
     margin: auto;
     background-color: rgb(70, 11, 97);
@@ -6,7 +6,7 @@
 }
 
 .topnav a {
-    display: inline-block; /* Links show inline by default */
+    display: inline-block;
     color: whitesmoke;
     text-align: center;
     padding: 12px 12px;
@@ -16,47 +16,46 @@
 }
 
 .topnav a:hover, .topnav a.active {
-    background-color: darkcyan; /* Highlight active or hovered link */
+    background-color: darkcyan;
 }
 
 .topnav .icon {
-    display: none; /* Hide the hamburger icon by default */
+    display: none; /* Hide hamburger icon by default */
 }
 
-/* TABLET */
-@media screen and (max-width: 900px) {
-    .topnav a {
-        padding: 8px 10px; /* Adjust padding for smaller screens */
-        font-size: 14px; /* Reduce font size for tablets */
-    }
-}
-
-/* PHONE */
+/* Mobile Portrait and Landscape */
 @media screen and (max-width: 600px) {
     .topnav a {
-        display: none; /* Hide all links except the hamburger icon */
+        display: none; /* Hide all links */
     }
+
     .topnav a.icon {
-        display: block; /* Show the hamburger icon for small screens */
+        display: block; /* Show the hamburger icon */
         float: right;
     }
+
     .topnav.responsive {
         position: relative;
     }
+
     .topnav.responsive a {
-        display: block; /* Show links in dropdown mode */
+        display: block; /* Show links when hamburger is clicked */
         text-align: left;
-    }
-    .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
     }
 }
 
-/* DESKTOP */
-@media screen and (min-width: 1200px) {
-    .topnav {
-        width: 80%; /* Slightly narrower navigation bar for desktop */
+/* Tablet */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .topnav a {
+        display: inline-block;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 901px) {
+    .topnav a {
+        display: inline-block;
     }
 }
